@@ -4,7 +4,8 @@
 // const argv = require("yargs").argv;
 
 // TODO: рефакторить
-const { Command } = require("commander");
+// const { Command } = require("commander");
+import { Command } from "commander";
 const program = new Command();
 program
   .option("-a, --action <type>", "choose action")
