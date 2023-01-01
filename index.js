@@ -1,11 +1,7 @@
-// import { info, log } from "./import.js";
-// info("info function");
-// log("log function");
-// const argv = require("yargs").argv;
-
 // TODO: рефакторить
-// const { Command } = require("commander");
 import { Command } from "commander";
+import { listContacts } from "./contacts.js";
+
 const program = new Command();
 program
   .option("-a, --action <type>", "choose action")
@@ -38,8 +34,10 @@ function invokeAction({ action, id, name, email, phone }) {
       break;
 
     default:
-      console.warn("\x1B[31m Unknown action type!");
+      console.warn("\x1B[31m Unknown action type!123");
   }
 }
 
-invokeAction(argv);
+// invokeAction(argv);
+
+console.log(await listContacts());

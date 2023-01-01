@@ -4,6 +4,12 @@
   "description": "",
   "main": "index.js",
   "type": "module",
+  "dependencies": {
+    "commander": "^9.4.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index.js",
@@ -13,15 +19,10 @@
     "type": "git",
     "url": "git+https://github.com/JaRcomGitHub/goit-nodejs-hw01.git"
   },
-  "keywords": [],
-  "author": "",
+  "author": "JaRcom",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/JaRcomGitHub/goit-nodejs-hw01/issues"
   },
-  "homepage": "https://github.com/JaRcomGitHub/goit-nodejs-hw01#readme",
-  "dependencies": {
-    "commander": "^9.4.1",
-    "nodemon": "^2.0.20"
-  }
+  "homepage": "https://github.com/JaRcomGitHub/goit-nodejs-hw01#readme"
 }
