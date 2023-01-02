@@ -5,13 +5,23 @@ import path from "path";
 const contactsPath = path.resolve("./db/contacts.json");
 
 async function readContacts() {
-  const data = await fs.readFile(contactsPath, "utf8");
-  const contacts = JSON.parse(data);
-  return contacts;
+  try {
+    const data = await fs.readFile(contactsPath, "utf8");
+    const contacts = JSON.parse(data);
+    return contacts;
+  } catch (error) {
+    console.log(error);
+    process.exit(1);
+  }
 }
 
 async function writeContacts(contacts) {
-  await fs.writeFile(contactsPath, JSON.stringify(contacts, " ", 2));
+  try {
+    await fs.writeFile(contactsPath, JSON.stringify(contacts, " ", 2));
+  } catch (error) {
+    console.log(error);
+    process.exit(2);
+  }
 }
 
 async function listContacts() {
